@@ -16,9 +16,9 @@ btnShowModal.forEach(function (btn) {
     overlay.classList.remove('hidden');
   });
 
-  btnCloseModal.addEventListener('click', function () {
-    modal.style.display = 'none';
-  });
+  //   btnCloseModal.addEventListener('click', function () {
+  //     modal.style.display = 'none';
+  //   });
 });
 
 btnCloseModal.addEventListener('click', hideOverlay);
