@@ -36,13 +36,26 @@ const krishna = {
       console.log(this.firstName);
     };
     isEternaArrow();
-    
+
     const isEternal = function () {
       console.log(this);
       console.log(this.firstName);
     };
-    isEternal();
+    // isEternal(); // Error
   },
 };
 
 krishna.calAge();
+
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5, 8);
