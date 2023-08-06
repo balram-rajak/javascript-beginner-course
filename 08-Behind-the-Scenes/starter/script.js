@@ -26,18 +26,23 @@
 // console.log(krishna.calrough());
 
 const krishna = {
-    firstName: 'Krishna',
-    year: 2000,
-    calAge: function () {
-        console.log(this.firstName);
+  firstName: 'Krishna',
+  year: 2000,
+  calAge: function () {
+    console.log(this.firstName);
 
-       const isEternal=function (){
-            console.log(this);
-            console.log(this.firstName);
-          }
-          isEternal();
-    },
-  
-  };
+    const isEternaArrow = () => {
+      console.log(this);
+      console.log(this.firstName);
+    };
+    isEternaArrow();
+    
+    const isEternal = function () {
+      console.log(this);
+      console.log(this.firstName);
+    };
+    isEternal();
+  },
+};
 
-  krishna.calAge();
+krishna.calAge();
