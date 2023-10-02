@@ -25,37 +25,59 @@
 // console.log(krishna.calAge());
 // console.log(krishna.calrough());
 
+// const krishna = {
+//   firstName: 'Krishna',
+//   year: 2000,
+//   calAge: function () {
+//     console.log(this.firstName);
+
+//     const isEternaArrow = () => {
+//       console.log(this);
+//       console.log(this.firstName);
+//     };
+//     isEternaArrow();
+
+//     const isEternal = function () {
+//       console.log(this);
+//       console.log(this.firstName);
+//     };
+//     // isEternal(); // Error
+//   },
+// };
+
+// krishna.calAge();
+
+// const addExpr = function (a, b) {
+//   console.log(arguments);
+//   let sum = 0;
+//   for (const argument of arguments) {
+//     sum += argument;
+//   }
+//   return sum;
+// };
+// addExpr(2, 5);
+// console.log(addExpr(2, 5, 8, 12));
+
+// var addArrow = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addArrow(2, 5, 8);
+
 const krishna = {
-  firstName: 'Krishna',
-  year: 2000,
-  calAge: function () {
-    console.log(this.firstName);
-
-    const isEternaArrow = () => {
-      console.log(this);
-      console.log(this.firstName);
-    };
-    isEternaArrow();
-
-    const isEternal = function () {
-      console.log(this);
-      console.log(this.firstName);
-    };
-    // isEternal(); // Error
-  },
+    firstName: 'Krishna',
+    year: 2000,
 };
 
-krishna.calAge();
+const damodar=krishna;
 
-const addExpr = function (a, b) {
-  console.log(arguments);
-  return a + b;
-};
-addExpr(2, 5);
-addExpr(2, 5, 8, 12);
+damodar.firstName='Radha';
+// object att changed
+console.log("Krishna",krishna);
+console.log("damodar",damodar);
 
-var addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
-};
-addArrow(2, 5, 8);
+// Shallow copy
+const adipurush=Object.assign({},krishna);
+adipurush.firstName='Adipurusham';
+console.log("Krishna",krishna);
+console.log("Adipurush",adipurush);
